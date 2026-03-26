@@ -183,5 +183,5 @@ npm pack use-obfuscator --dry-run 2>/dev/null || npx -y npm-package-json-lint us
 ## Посилання
 
 - npm: https://www.npmjs.com/package/use-obfuscator
-- GitHub: https://github.com/r-skrylnyk/use-obfuscator
+- GitHub: https://github.com/r-skrylnyk/easy-obfuscator
 - Старий пакет (obscure): https://github.com/bitstrider/obscure
