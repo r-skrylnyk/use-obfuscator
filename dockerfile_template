@@ -9,6 +9,11 @@
 #   - карта обфускації: use-obfuscator.map.json (було: obscure.map)
 #   - підтримує .php, .vue, .jsx, .tsx, glob, конфіг-файл
 #
+# ВАЖЛИВО: Потрібен Node.js >= 20.18.1
+#   use-obfuscator залежить від cheerio@1.x який тягне undici@7.x.
+#   undici@7.x не працює на Node 18 (ReferenceError: File is not defined).
+#   Використовуйте node:20 або новіше.
+#
 # Перед використанням:
 #   1. Додайте exclude-classes.json у корінь сайту (див. нижче)
 #   2. Замініть <YOUR_DOCKERHUB_USER>/<YOUR_IMAGE_NAME> на своє
@@ -25,7 +30,7 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 
 # --- Встановити use-obfuscator глобально ------------------------------------
-RUN npm install -g use-obfuscator@1.0.0
+RUN npm install -g use-obfuscator@1.0.1
 
 WORKDIR /app
 COPY . .
