@@ -4,3 +4,5 @@ use-obfuscator.config.js
 dist/
 .DS_Store
 readme-for-dev.md
+website_for_test/
+.vscode/settings.json
